@@ -26,10 +26,10 @@ echo eccAAcQ2B4Nmb29DpBPDgWGBYoFj | \
 ## Wire protocol
 ```
 magicHeader                = 0x79c70001 // for versioning and format identification
-encode(d: Datum)           = magicHeader ++ encodeItem(d)
 Datum                      = String | Int64 | Decimal | List<Datum>
+encode(d: Datum)           = magicHeader ++ encodeItem(d)
 encodeItem(n: Int64)       = 0b00 ++ varintskip2(n)
-encodeItem(x: Decimal)     = 0b00 ++ varintskip2(x.exponent) ++ varint(x.mantissa)
+encodeItem(x: Decimal)     = 0b01 ++ varintskip2(x.exponent) ++ varint(x.mantissa)
 encodeItem(s: String)      = 0b10 ++ varuintskip2(s.length) ++ s.chars
 encodeItem(l: List<Datum>) = 0b11 ++ varuintskip2(l.length) ++ concat(encodeItem(d) for d in l)
 
