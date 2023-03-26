@@ -10,7 +10,7 @@ go build
 ### Encoding
 ```sh
 echo '[123, "foo", 12.34, ["a", "b", "c"]]' | \
-  ./encoder -encode -base64=true
+  ./tencoder -encode -base64=true
   
 > eccAAcQ2B4Nmb29DpBPDgWGBYoFj
 ```
@@ -18,7 +18,7 @@ echo '[123, "foo", 12.34, ["a", "b", "c"]]' | \
 ### Decoding
 ```sh
 echo eccAAcQ2B4Nmb29DpBPDgWGBYoFj | \
-  ./encoder -decode -base64=true
+  ./tencoder -decode -base64=true
 
 > [123,"foo","12.34",["a","b","c"]]
 ```
