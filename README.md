@@ -5,7 +5,7 @@
 build binary:
 `go build`
 
-encoding
+### Encoding
 ```sh
 echo '[123, "foo", 12.34, ["a", "b", "c"]]' | \
   ./encoder -encode -base64=true
@@ -13,7 +13,7 @@ echo '[123, "foo", 12.34, ["a", "b", "c"]]' | \
 > eccAAcQ2B4Nmb29DpBPDgWGBYoFj
 ```
 
-decoding
+### Decoding
 ```sh
 echo eccAAcQ2B4Nmb29DpBPDgWGBYoFj | \
   ./encoder -decode -base64=true
