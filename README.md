@@ -3,7 +3,9 @@
 ## Usage
 
 build binary:
-`go build`
+```sh
+go build
+```
 
 ### Encoding
 ```sh
