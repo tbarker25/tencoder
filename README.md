@@ -57,3 +57,8 @@ Few arbitrary restrictions:
 - Agnostic to character encoding and can accept arbitrary bytes in strings
 - The full range of a 64-bit signed integer can be marshalled. Integers outside this boundry will be transparently transmitted as a BigDecimal.
 - Non-integer numbers are transmitted as a Decimal to avoid rounding issues (appropriateness of this depends on business rules).
+
+Limitations:
+- The format is not particularly extensible, although there is a version number that could be used for backwards compatibility if the format were changed.
+- There is no self-synchronizing mechanism
+- There's no error checking. Its assumed this would be performed at in a different layer.
