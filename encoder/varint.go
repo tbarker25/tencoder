@@ -1,5 +1,9 @@
 package encoder
 
+// Known issues:
+// - there should be overflow checks
+// - there should be range checks on array reads
+
 func readUvarint(data []byte) (result uint64, bytesRead int) {
 	x := uint64(0)
 	s := 0
