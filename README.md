@@ -63,3 +63,6 @@ Limitations:
 - There is no self-synchronizing mechanism
 - There's no parity checking mechanism. Its assumed this would be performed at in a different layer.
 - Error checking in the implementation is not exhaustive and its possible to trigger panics with malformed input
+
+Other notes:
+- I would typically avoid rolling my own wire-format in favor of using protobufs/gRPC etc
