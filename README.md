@@ -61,4 +61,5 @@ Few arbitrary restrictions:
 Limitations:
 - The format is not particularly extensible, although there is a version number that could be used for backwards compatibility if the format were changed.
 - There is no self-synchronizing mechanism
-- There's no error checking. Its assumed this would be performed at in a different layer.
+- There's no parity checking mechanism. Its assumed this would be performed at in a different layer.
+- Error checking in the implementation is not exhaustive and its possible to trigger panics with malformed input
